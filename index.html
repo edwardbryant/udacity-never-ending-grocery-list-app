@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/normalize.min..css">
+    <link rel="stylesheet" type="text/css" href="lib/font-awesome-4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300">
+    <title>The Never-Ending Grocery List</title>
+</head>
+<body>
+<header>
+    <div class="content">
+        <h1><span id="title-1">The</span><span id="title-2">Never-Ending</span><span id="title-3">Grocery List</span></h1>
+        <div id="logo"><img src="img/bag.png"></div>
+    </div>
+</header>
+<main id="main" role="main">
+    <div class="content"> 
+        <section id="add">
+            <h2>Add This</h2>
+            <div id="add-box">
+                <div class="col-left"><i class="fa fa-angle-right"></i></div>
+                <div class="col-middle"><input type="text" id="new-item" name="new-item" placeholder=" type name of new item here "></div>
+                <div class="col-right"><i class="fa fa-plus-square"></i></div>
+            </div>
+        </section>
+        <section id="need">
+            <h2>Need <span class="total">0</span> Items</h2>
+            <div class="grocery-list">
+                <div class="item">
+                    <div class="col-left check"><i class="fa fa-square-o"></i></div>
+                    <div class="col-middle name">Vitamin Water</div>
+                    <div class="col-right remove"><i class="fa fa-times-circle"></i></div>
+                </div>
+                <div class="item">
+                    <div class="col-left check"><i class="fa fa-square-o"></i></div>
+                    <div class="col-middle name">Kale</div>
+                    <div class="col-right remove"><i class="fa fa-times-circle"></i></div>
+                </div>
+                <div class="item">
+                    <div class="col-left check"><i class="fa fa-square-o"></i></div>
+                    <div class="col-middle name">Rice Cakes</div>
+                    <div class="col-right remove"><i class="fa fa-times-circle"></i></div>
+                </div>
+                <div class="item">
+                    <div class="col-left check"><i class="fa fa-square-o"></i></div>
+                    <div class="col-middle name">Greek Yogurt</div>
+                    <div class="col-right remove"><i class="fa fa-times-circle"></i></div>
+                </div>
+                <div class="empty">Congrats, no more items needed.<br>You are done!</div>                
+            </div>
+        </section>
+        <section id="got">
+            <h2>Got <span class="total">0</span> Items</h2>
+            <div class="grocery-list">
+                <div class="item">
+                    <div class="col-left check"><i class="fa fa-check-square-o"></i></div>
+                    <div class="col-middle name">Vodka</div>
+                    <div class="col-right remove"><i class="fa fa-times-circle"></i></div>
+                </div>
+                <div class="item">
+                    <div class="col-left check"><i class="fa fa-check-square-o"></i></div>
+                    <div class="col-middle name">Pop Tarts</div>
+                    <div class="col-right remove"><i class="fa fa-times-circle"></i></div>
+                </div>
+                <div class="item">
+                    <div class="col-left check"><i class="fa fa-check-square-o"></i></div>
+                    <div class="col-middle name">Sharp Chedder Cheese</div>
+                    <div class="col-right remove"><i class="fa fa-times-circle"></i></div>
+                </div>
+                <div class="item">
+                    <div class="col-left check"><i class="fa fa-check-square-o"></i></div>
+                    <div class="col-middle name">Lucky Charms</div>
+                    <div class="col-right remove"><i class="fa fa-times-circle"></i></div>
+                </div>
+                <div class="empty">You haven't gotten anything!</div>                
+            </div>
+        </section>
+    </div>    
+</main>
+<footer>
+    <div class="content">
+        <div class="credits">Bag icon via <a href="http://www.pixeden.com/media-icons/flat-design-icons-set-vol1" target="_blank">Flat Design Icon Set, Vol 1</a> &bull; <a href="http://www.pixeden.com/" target="_blank">pixeden.com</a></div>
+        <div id="copyright">Copyright &copy; 2014, Edward Bryant</div>    
+        <div class="credits">Go Forth and Shop!</div>
+    </div>    
+</footer>
+<script src="http://code.jquery.com/jquery.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
