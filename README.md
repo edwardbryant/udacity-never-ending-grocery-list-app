@@ -6,7 +6,7 @@ A simple web app for keeping track of items needed from the grocery store. The i
 
 The concept behind the app is that in real life you often need different items from different places (e.g., big box discount stores, grocery stores, specialty food stores, etc.), so by the time you cross some items off your list at one store, new items are often already being added. Since such lists seem continuous, the app was titled the "Never-Ending Grocery List". The design of the app is, therefore, focused on a simple interface that allows users to add and remove items but assumes that users rarely, if ever, remove all the items on the list at once.
 
-## Features 
+## Basic Features 
 
 With the above simple concept in mind, the app includes:
 
