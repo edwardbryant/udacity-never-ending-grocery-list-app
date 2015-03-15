@@ -47,15 +47,36 @@ $(document).ready(function(){
     $('#add-box .col-right').on('click', function() {
         var name = $('#new-item').val();
         if (name != "") {
-            var newNode = $('<div class="item" style="display:none;"><div class="col-left check"><i class="fa fa-square-o"></i></div><div class="col-middle name">'+name+' <span class="qty">('+1+')</span></div><div class="col-right remove"><i class="fa fa-times-circle"></i></div></div>');
-            $('#need').find('.grocery-list').first().prepend(newNode);
-            $('#need').find('.item').first().fadeIn(800);
+
+            // match dups - if true increase qty, else add item.
+
+            // TODO - add qty increase code. 
+            // TODO - trim whitespace from user input.
+            // TODO - reject empty user input.
+
+            if (duplicateExists(name)) {
+                console.log("Item is already on the need list - so will increase qty.");
+            } else {
+                console.log("it's not there already - so adding it.");
+                var newNode = $('<div class="item hidden"><div class="col-left check"><i class="fa fa-square-o"></i></div><div class="col-middle"><span class="name">'+name+'</span> &times; <span class="qty">'+1+'</span></div><div class="col-right remove"><i class="fa fa-times-circle"></i></div></div>');
+                $('#need').find('.grocery-list').first().prepend(newNode);
+                $('#need').find('.item').first().fadeIn(800);
+            }
             $('#new-item').val('');
             updateTotal("need");
         }
     })
 
 });
+function duplicateExists(name) {
+    if ($('#need').find('.name').filter( function(){
+        return $(this).text().toLowerCase() === name.toLowerCase();  
+    }).length > 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
 function Total(type) {
     return $("#" + type).find(".item").length;
 }
