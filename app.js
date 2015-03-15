@@ -46,27 +46,19 @@ $(document).ready(function(){
 
     $('#add-box .col-right').on('click', function() {
         var name = $('#new-item').val();
+        // TODO - trim whitespace from user input.
+        // TODO - reject empty user input.
         if (name != "") {
-
-            // match dups - if true increase qty, else add item.
-
-            // TODO - add qty increase code. 
-            // TODO - trim whitespace from user input.
-            // TODO - reject empty user input.
-
             if (duplicateExists(name)) {
                 console.log("Item is already on the need list - so will increase qty.");
+                // TODO - add qty increase code.
             } else {
-                console.log("it's not there already - so adding it.");
-                var newNode = $('<div class="item hidden"><div class="col-left check"><i class="fa fa-square-o"></i></div><div class="col-middle"><span class="name">'+name+'</span> &times; <span class="qty">'+1+'</span></div><div class="col-right remove"><i class="fa fa-times-circle"></i></div></div>');
-                $('#need').find('.grocery-list').first().prepend(newNode);
-                $('#need').find('.item').first().fadeIn(800);
+                addNewItem(name);   
             }
             $('#new-item').val('');
             updateTotal("need");
         }
     })
-
 });
 function duplicateExists(name) {
     if ($('#need').find('.name').filter( function(){
@@ -76,6 +68,11 @@ function duplicateExists(name) {
     } else {
         return false;
     }
+}
+function addNewItem(name) {
+    var newNode = $('<div class="item hidden"><div class="col-left check"><i class="fa fa-square-o"></i></div><div class="col-middle"><span class="name">'+name+'</span> &times; <span class="qty">'+1+'</span></div><div class="col-right remove"><i class="fa fa-times-circle"></i></div></div>');
+    $('#need').find('.grocery-list').first().prepend(newNode);
+    $('#need').find('.item').first().fadeIn(800);
 }
 function Total(type) {
     return $("#" + type).find(".item").length;
