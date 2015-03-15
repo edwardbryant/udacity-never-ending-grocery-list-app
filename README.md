@@ -10,8 +10,15 @@ The concept behind the app is that in real life you often need different items f
 
 With the above simple concept in mind, the app includes:
 
-- an input box for new items to be added.
-  - when duplicate items are entered items stack (increase quantity on existing item). 
-- a "need" list for items yet to be purchased      
-- a "got" list for items already purchased
+1. an input box for needed items to be added.
+  - when duplicate items are entered items stack (increase quantity on existing item).
+2. a "need" list for items yet to be purchased. 
+  - total items displayed at top of grouping.
+  - when an item is purchased it can be checked (moving it to the "got" list).
+  - when an error is made or an item is otherwise not needed it can be removed with delete button.
+3. a "got" list for items already purchased.
+  - total items displayed at top of grouping.
+  - when user wants to move an item back to "need" list, it can be unchecked. 
+  - when history of "got" items is no longer wanted, the clear list button can be used.
+  - when a user wants to remove select items from the "got" list, the delete button can be used.
 
