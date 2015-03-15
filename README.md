@@ -10,12 +10,8 @@ The concept behind the app is that in real life you often need different items f
 
 With the above simple concept in mind, the app includes:
 
-    - an input box for new items to be added.
-
-        - when duplicate items are entered items stack (increase quantity on existing item). 
-
-    - a "need" list for items yet to be purchased      
-
-
-    - a "got" list for items already purchased
+- an input box for new items to be added.
+  - when duplicate items are entered items stack (increase quantity on existing item). 
+- a "need" list for items yet to be purchased      
+- a "got" list for items already purchased
 
