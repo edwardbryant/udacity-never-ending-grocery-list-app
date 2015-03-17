@@ -144,7 +144,7 @@ h2 {
   .item .qty {
     font-size: 1.6rem; }
 
-#got .item > .name {
+#got .item > .col-middle {
   color: #d44444;
   text-decoration: line-through; }
 #got .item > .check {
