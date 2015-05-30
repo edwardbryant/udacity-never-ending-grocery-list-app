@@ -53,11 +53,11 @@ The duplicateExists function takes two arguments 'name' and 'group' to check if 
 
 ##### combineItems(name, qty, group)
 
-coming soon
+The combineItems function takes the three arguments (1) the name of the item being added, (2) the qty of the item being added, and (3) the group the item is being added to (i.e., 'need' or 'got'). The function will then find the duplicate item already in that group and reflect a single entry with a new qty. In practice, this means when a new item is added the function is called with (1) the name the user input, (2) a qty of 1, and (3) the 'need' group. However, items moving from 'got' to 'need' (i.e., where a user unchecks a previously checked item) may involve different qty amounts. 
 
 ##### addNewItem(name)
 
-coming soon
+The addNewItem function takes the name of the new item to be added, assembles the needed markup to be inserted, and inserts the item into the 'need' group. The function performs a trim (removing whitespace from beginning and end of string) on the name input by the user. It also triggers an alert, if the user attempts to add an item when the input box is empty.
 
 ##### removeItem(x)
 
@@ -86,7 +86,4 @@ $('#got').on('click', '.check', function() {
 ## Copyright and License
 
 - Project code contributed by [Edward Bryant](http://www.edwardbryant.com) is offered under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
-
-
-
 
