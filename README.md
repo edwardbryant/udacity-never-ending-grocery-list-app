@@ -41,9 +41,33 @@ time-travel-trivia-quiz-master.zip/
 
 ## Documentation
 
-The functions used to run the trivia quiz are located in [js/app.js](https://github.com/edwardbryant/Time-Travel-Trivia-Quiz/blob/master/js/app.js) and are explained in more fully below. 
+The functions used to run the trivia quiz are located in [js/app.js](https://github.com/edwardbryant/Never-Ending-Grocery-List-App/blob/master/js/app.js) and are explained in more fully below. 
 
 ##### updateGroups()
+
+This function refreshes some display elements to the user. It checks the 'need' and 'got' groupings and looks for any items. Based on what it finds, it will update the total number of items displayed at the top of each group. It will also trigger the display of a message to the user if the list is empty (i.e., the item count is 0). This function is called within various other functions to update these items whenever the list counts may have changed.  
+
+##### duplicateExists(name, group)
+
+The duplicateExists function takes two arguments 'name' and 'group' to check if a particular item grouping contains a duplicate entry with the provided string 'name'. As the web app is currently designed, the 'group' argument must be either the string "need" or "got". The function will return a boolean true/false value only if there is an exact match. Matching is not case-sensitive.   
+
+##### combineItems(name, qty, group)
+
+coming soon
+
+##### addNewItem(name)
+
+coming soon
+
+##### removeItem(x)
+
+coming soon
+
+##### checkItem(x)
+
+coming soon
+
+##### uncheckItem(x)
 
 coming soon
 
