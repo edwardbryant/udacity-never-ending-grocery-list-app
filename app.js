@@ -7,22 +7,29 @@ $(document).ready(function(){
         var newItem = $('#new-item').val();
         addNewItem(newItem);
     })
+
     $(document).keydown(function(e) {
         if (e.keyCode == 13) {
             var newItem = $('#new-item').val();
             addNewItem(newItem);
         }   
     })
+
     $('#need').on('click', '.check', function() {
         checkItem(this);
     })
+
     $('#got').on('click', '.check', function() {        
         uncheckItem(this);
     })
+
     $('.grocery-list').on('click', '.remove', function() {
         removeItem(this);
     })
+
 });
+
+
 var updateGroups = function() {
     var groups = ["need","got"];
     for (i=0;i<groups.length;i++) {
@@ -37,6 +44,7 @@ var updateGroups = function() {
         }
     }
 }
+
 var duplicateExists = function(name,group) {
     if ($('#' + group).find('.name').filter( function(){
         return $(this).text().toLowerCase() === name.toLowerCase();  
@@ -46,6 +54,7 @@ var duplicateExists = function(name,group) {
         return false;
     }
 }
+
 var combineItems = function(name,qty,group) {
     $.expr[":"].contains = $.expr.createPseudo(function(arg) {
         return function( elem ) {
@@ -57,6 +66,7 @@ var combineItems = function(name,qty,group) {
     currentQty = parseInt(currentQty) + qty;
     target.text(currentQty);
 }
+
 var addNewItem = function(name) {
     name = name.trim();
     if (name != "") {
@@ -79,12 +89,14 @@ var addNewItem = function(name) {
         alert("UH OH!\n\n The add new item box is empty.\n Please enter a name and try again. ");
     }
 }
+
 var removeItem = function(x) {
     $(x).parent().fadeOut(600, function() {
         $(x).parent().remove();
         updateGroups();
     })
 }
+
 var checkItem = function(x) {
     var node = $('<i class="fa fa-check-square-o">');
     $(x).find('.fa').remove();
@@ -106,6 +118,7 @@ var checkItem = function(x) {
         }
     });
 }
+
 var uncheckItem = function(x) {
     var node = $('<i class="fa fa-square-o">');
     $(x).find('.fa').remove();
