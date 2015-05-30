@@ -41,7 +41,7 @@ time-travel-trivia-quiz-master.zip/
 
 ## Documentation
 
-The functions used to run the trivia quiz are located in [js/app.js](https://github.com/edwardbryant/Never-Ending-Grocery-List-App/blob/master/js/app.js) and are explained in more fully below. 
+The functions used to run grocery list web app are located in [js/app.js](https://github.com/edwardbryant/Never-Ending-Grocery-List-App/blob/master/app.js) and are explained more fully below. 
 
 ##### updateGroups()
 
@@ -61,15 +61,27 @@ coming soon
 
 ##### removeItem(x)
 
-coming soon
+The removeItem function is designed to be triggered by a jQuery event in which the user clicks on an item's delete icon. The argument is the jQuery identifier for the item. The function performs a fadeOut from whichever group the item is located.
 
 ##### checkItem(x)
 
-coming soon
+The checkItem function is designed to be triggered by a jQuery event in which the user clicks on an item's checkbox. The argument is the jQuery identifier for the item. The function displays a checked box to the user, performs a fadeOut (in the 'need' group), and performs a fadeIn (in the 'got' group). In short, moving the item from one grouping to the other.
+
+```
+$('#need').on('click', '.check', function() {
+        checkItem(this);
+    })
+```  
 
 ##### uncheckItem(x)
 
-coming soon
+The uncheckItem function is designed to be triggered by a jQuery event in which the user clicks on an item's already checked checkbox. The argument is the jQuery identifier for the item. The function displays an unchecked box to the user, performs a fadeOut (in the 'got' group), and performs a fadeIn (in the 'need' group). In short, moving the item from one grouping to the other.
+
+```
+$('#got').on('click', '.check', function() {        
+        uncheckItem(this);
+    })
+```
 
 ## Copyright and License
 
